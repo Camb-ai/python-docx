@@ -106,6 +106,38 @@ class Run(Parented):
         properties for this run, such as font name and size.
         """
         return Font(self._element)
+    
+    @font.setter
+    def font(self, value: Font):
+        """
+        Sets the |Font| object of this run.
+        """
+        self.font.all_caps = value.all_caps
+        self.font.bold = value.bold
+        # self.font.color = value.color
+        self.font.complex_script = value.complex_script
+        self.font.cs_bold = value.cs_bold
+        self.font.cs_italic = value.cs_italic
+        self.font.double_strike = value.double_strike
+        self.font.emboss = value.emboss
+        self.font.hidden = value.hidden
+        self.font.highlight_color = value.highlight_color
+        self.font.imprint = value.imprint
+        self.font.italic = value.italic
+        self.font.math = value.math
+        if value.math != None: print(f'Math formula is: {str(value.math)}')
+        self.font.name = value.name
+        self.font.no_proof = value.no_proof
+        self.font.rtl = value.rtl
+        self.font.shadow = value.shadow
+        self.font.small_caps = value.small_caps
+        self.font.snap_to_grid = value.snap_to_grid
+        self.font.spec_vanish = value.spec_vanish
+        self.font.strike = value.strike
+        self.font.subscript = value.subscript
+        self.font.superscript = value.superscript
+        self.font.underline = value.underline
+        self.font.web_hidden = value.web_hidden
 
     @property
     def italic(self):
