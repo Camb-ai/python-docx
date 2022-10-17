@@ -114,7 +114,7 @@ class Run(Parented):
         """
         self.font.all_caps = value.all_caps
         self.font.bold = value.bold
-        # self.font.color = value.color
+        #self.font.color = value.color
         self.font.complex_script = value.complex_script
         self.font.cs_bold = value.cs_bold
         self.font.cs_italic = value.cs_italic
@@ -125,7 +125,7 @@ class Run(Parented):
         self.font.imprint = value.imprint
         self.font.italic = value.italic
         self.font.math = value.math
-        if value.math != None: print(f'Math formula is: {str(value.math)}')
+        self.font.size = value.size
         self.font.name = value.name
         self.font.no_proof = value.no_proof
         self.font.rtl = value.rtl
